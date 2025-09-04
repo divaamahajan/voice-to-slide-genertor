@@ -1,40 +1,7 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[codz]
+*.py[cod]
 *$py.class
-
-# Audio files
-backend/uploads/
-backend/*.wav
-backend/*.mp3
-backend/*.m4a
-backend/*.webm
-backend/*.ogg
-backend/*.flac
-frontend/*.wav
-frontend/*.mp3
-frontend/*.m4a
-frontend/*.webm
-frontend/*.ogg
-frontend/*.flac
-
-# Frontend specific
-frontend/node_modules/
-frontend/.next/
-frontend/out/
-frontend/build/
-frontend/dist/
-frontend/.env
-frontend/.env.local
-frontend/.env.development.local
-frontend/.env.test.local
-frontend/.env.production.local
-
-# Backend specific
-backend/myenv/
-backend/uploads/
-backend/*.log
-backend/nohup.out
 
 # C extensions
 *.so
@@ -127,19 +94,12 @@ ipython_config.py
 #   install all needed dependencies.
 #Pipfile.lock
 
-# UV
-#   Similar to Pipfile.lock, it is generally recommended to include uv.lock in version control.
-#   This is especially recommended for binary packages to ensure reproducibility, and is more
-#   commonly ignored for libraries.
-#uv.lock
-
 # poetry
 #   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
-#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   This is especially recommended for binary packages to ensure reproducibility, and more
 #   commonly ignored for libraries.
 #   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
 #poetry.lock
-#poetry.toml
 
 # pdm
 #   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
@@ -149,13 +109,6 @@ ipython_config.py
 #pdm.toml
 .pdm-python
 .pdm-build/
-
-# pixi
-#   Similar to Pipfile.lock, it is generally recommended to include pixi.lock in version control.
-#pixi.lock
-#   Pixi creates a virtual environment in the .pixi directory, just like venv module creates one
-#   in the .venv directory. It is recommended not to include this directory in version control.
-.pixi
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
 __pypackages__/
@@ -176,6 +129,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+myenv/
 
 # Spyder project settings
 .spyderproject
@@ -208,38 +162,11 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-# Abstra
-# Abstra is an AI-powered process automation framework.
-# Ignore directories containing user credentials, local state, and settings.
-# Learn more at https://abstra.io/docs
-.abstra/
+# VS Code
+.vscode/
 
-# Visual Studio Code
-#  Visual Studio Code specific template is maintained in a separate VisualStudioCode.gitignore 
-#  that can be found at https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
-#  and can be added to the global gitignore or merged into this file. However, if you prefer, 
-#  you could uncomment the following to ignore the entire vscode folder
-# .vscode/
-
-# Ruff stuff:
-.ruff_cache/
-
-# PyPI configuration file
-.pypirc
-
-# Cursor
-#  Cursor is an AI-powered code editor. `.cursorignore` specifies files/directories to
-#  exclude from AI features like autocomplete and code analysis. Recommended for sensitive data
-#  refer to https://docs.cursor.com/context/ignore-files
-.cursorignore
-.cursorindexingignore
-
-# Marimo
-marimo/_static/
-marimo/_lsp/
-__marimo__/
-
-# Project specific
+# Audio files
+uploads/
 *.wav
 *.mp3
 *.m4a
@@ -247,12 +174,15 @@ __marimo__/
 *.ogg
 *.flac
 
-# IDE and Editor files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
+# Log files
+*.log
+nohup.out
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.temp
 
 # OS generated files
 .DS_Store
@@ -263,17 +193,16 @@ __marimo__/
 ehthumbs.db
 Thumbs.db
 
-# Logs
-*.log
-logs/
+# FastAPI specific
+.pytest_cache/
+.coverage
+htmlcov/
 
-# Temporary files
-temp/
-tmp/
-*.tmp
-*.temp
+# Database files
+*.db
+*.sqlite
+*.sqlite3
 
-# Environment files
-.env
-.env.local
-.env.*.local
+# Configuration files with secrets
+config.ini
+secrets.json
